@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-900 border-b border-gray-800">
+        <div class="container mx-auto px-4 flex justify-between items-center h-16">
+            <!-- Logo -->
+            <a href="/" class="flex items-center space-x-2">
+                <img src="asset/logo.svg" alt="Gyanith Logo" class="w-16 h-16 object-contain">
+                <span class="text-xl font-bold">Gyanith 25</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="/" class="hover:text-blue-500 transition-colors text-gray-300">Home</a></li>
+                <li><a href="/about" class="hover:text-blue-500 transition-colors text-gray-300">About</a></li>
+                <li><a href="/teams" class="hover:text-blue-500 transition-colors text-gray-300">Teams</a></li>
+                <li><a href="/events" class="hover:text-blue-500 transition-colors text-gray-300">Events</a></li>
+                <li><a href="/sponsors" class="hover:text-blue-500 transition-colors text-gray-300">Sponsors</a></li>
+                <li><a href="/login" class="hover:text-blue-500 transition-colors text-gray-300">Login</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-300 hover:text-white" id="menu-toggle">
+                ☰
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <ul class="hidden md:hidden flex flex-col items-center space-y-4 py-4 bg-gray-800" id="mobile-menu">
+            <li><a href="/" class="text-gray-300 hover:text-blue-500">Home</a></li>
+            <li><a href="/about" class="text-gray-300 hover:text-blue-500">About</a></li>
+            <li><a href="/teams" class="text-gray-300 hover:text-blue-500">Teams</a></li>
+            <li><a href="/events" class="text-gray-300 hover:text-blue-500">Events</a></li>
+            <li><a href="/sponsors" class="text-gray-300 hover:text-blue-500">Sponsors</a></li>
+            <li><a href="/login" class="text-gray-300 hover:text-blue-500">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
