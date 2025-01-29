@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Details | Gyanith 25</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/YOUR_FA_KIT.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-900 text-white p-6">
+  <div class="max-w-4xl mx-auto space-y-8">
+    
+    <!-- Back Button -->
+    <a href="index.html" class="text-blue-400 hover:text-blue-300 flex items-center">
+      <i class="fas fa-arrow-left mr-2"></i> Back to Events
+    </a>
+
+    <!-- Event Hero Section -->
+    <div class="relative rounded-xl overflow-hidden">
+      <img id="eventImage" class="w-full h-64 md:h-96 object-cover" alt="Event Image">
+      <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+      <div class="absolute bottom-0 left-0 right-0 p-6">
+        <h1 id="eventName" class="text-3xl md:text-4xl font-bold"></h1>
+      </div>
+    </div>
+
+    <!-- Event Details -->
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="md:col-span-2 space-y-6">
+        <div class="bg-gray-800 rounded-lg p-6">
+          <h2 class="text-2xl font-bold mb-4">About the Event</h2>
+          <p id="eventDescription" class="text-gray-300 leading-relaxed"></p>
+        </div>
+        <div class="bg-gray-800 rounded-lg p-6">
+          <h2 class="text-2xl font-bold mb-4">Registration</h2>
+          <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors w-full md:w-auto">
+            Register Now
+          </button>
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        <div class="bg-gray-800 rounded-lg p-6">
+          <h2 class="text-xl font-bold mb-4">Event Details</h2>
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3 text-gray-300">
+              <i class="fas fa-calendar-alt text-blue-500"></i>
+              <span id="eventDate"></span>
+            </div>
+            <div class="flex items-center space-x-3 text-gray-300">
+              <i class="fas fa-clock text-blue-500"></i>
+              <span id="eventTime"></span>
+            </div>
+            <div class="flex items-center space-x-3 text-gray-300">
+              <i class="fas fa-map-marker-alt text-blue-500"></i>
+              <span id="eventVenue"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg p-6">
+          <h2 class="text-xl font-bold mb-4">Event Coordinators</h2>
+          <div id="eventCoordinators" class="space-y-4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="event.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
