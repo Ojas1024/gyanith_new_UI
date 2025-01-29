@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/YOUR_FA_KIT.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white p-6">
+
+  <div class="max-w-4xl mx-auto space-y-8">
+
+    <!-- Profile Header -->
+    <div class="text-center">
+      <div class="inline-block p-4 bg-blue-500 rounded-full mb-4">
+        <i class="fas fa-user text-white text-3xl"></i>
+      </div>
+      <h1 class="text-3xl font-bold" id="userName"></h1>
+      <p class="text-gray-400" id="userCollege"></p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- User Details -->
+      <div class="md:col-span-1 space-y-6">
+        <div class="bg-gray-800 rounded-lg p-6">
+          <h2 class="text-xl font-bold mb-4">Personal Information</h2>
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3 text-gray-300">
+              <i class="fas fa-envelope text-blue-500"></i>
+              <span id="userEmail"></span>
+            </div>
+            <div class="flex items-center space-x-3 text-gray-300">
+              <i class="fas fa-university text-blue-500"></i>
+              <span id="userCollegeDetail"></span>
+            </div>
+            <div class="flex items-center space-x-3 text-gray-300">
+              <i class="fas fa-book text-blue-500"></i>
+              <span id="userDepartment"></span>
+            </div>
+            <div class="flex items-center space-x-3 text-gray-300">
+              <i class="fas fa-calendar text-blue-500"></i>
+              <span id="userYear"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg p-6">
+          <button id="editProfileBtn" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-lg transition-colors">
+            Edit Profile
+          </button>
+        </div>
+      </div>
+
+      <!-- Registered Events -->
+      <div class="md:col-span-2">
+        <div class="bg-gray-800 rounded-lg p-6">
+          <h2 class="text-xl font-bold mb-4">Registered Events</h2>
+          <div class="grid gap-4" id="registeredEventsList"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="user.js"></script>
+  <script src="script2.js"></script>
+
+</body>
+</html>
