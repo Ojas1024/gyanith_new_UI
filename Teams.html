@@ -3,131 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Team</title>
+    <title>Team Structure</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .tech-gradient {
+            background: linear-gradient(135deg, #1e3a8a, #9333ea);
+        }
+        .tech-font {
+            color: #38bdf8;
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-white">
-    <div class="space-y-16 py-12 px-4">
-
-        <!-- Hero Section -->
-        <section class="text-center space-y-6">
-            <h1 class="text-4xl md:text-5xl font-bold">Our Team</h1>
-            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                Meet the dedicated individuals who make Gyanith 25 possible through
-                their vision, leadership, and commitment.
-            </p>
-        </section>
-
-        <!-- Dignitaries Section -->
-        <div class="max-w-7xl mx-auto px-4 space-y-6">
-            <div class="flex items-center space-x-3 justify-center">
-                <div class="p-2 bg-blue-500 rounded-full">
-                    🏆 <!-- Award Icon Placeholder -->
-                </div>
-                <h2 class="text-3xl font-bold text-center">Dignitaries</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Member 1 -->
-                <div class="bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=300&h=300" 
-                         alt="Dr. K. Sankaranarayanasamy" 
-                         class="w-full h-48 object-cover">
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-semibold mb-2">Dr. K. Sankaranarayanasamy</h3>
-                        <p class="text-blue-400 font-medium mb-2">Chief Patron</p>
-                        <p class="text-gray-400 text-sm">Director, NIT Puducherry</p>
-                    </div>
-                </div>
-                <!-- Member 2 -->
-                <div class="bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?fit=crop&w=300&h=300" 
-                         alt="Dr. R. Suresh Kumar" 
-                         class="w-full h-48 object-cover">
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-semibold mb-2">Dr. R. Suresh Kumar</h3>
-                        <p class="text-blue-400 font-medium mb-2">Patron</p>
-                        <p class="text-gray-400 text-sm">Dean (Student Welfare)</p>
-                    </div>
-                </div>
-            </div>
+<body class="tech-gradient p-6 min-h-screen flex items-center justify-center">
+    <div class="max-w-4xl mx-auto bg-gray-900 p-6 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold text-center tech-font mb-6">Team Structure</h1>
+        
+        <div class="space-y-6">
+            <!-- Team Section -->
+            <script>
+                const teams = [
+                    { name: 'Chief Patron', members: [ { name: 'Dr. Makarand Madhao Ghangrekar', role: 'Director, NIT Puducherry' } ] },
+                    { name: 'Patron', members: [ { name: 'Dr. Sundaravarathan S', role: 'Registrar, NIT Puducherry' } ] },
+                    { name: 'Chairperson', members: [ { name: 'Dr. G S Mahapatra', role: 'Dean - Research & Consultancy' } ] },
+                    { name: 'Associate Deans', members: [ { name: 'Dr. Aniruddha Kanhe', role: 'Associate Dean - Research & Consultancy' }, { name: 'Dr. M V A Raju Bahubalendruni', role: 'Associate Dean - Research & Consultancy' } ] },
+                    { name: 'Convener', members: [ { name: 'Dr Hemachander Allamsetty', role: 'Assistant Professor' }, { name: 'Naveen Raj R', role: 'Assistant Professor' } ] },
+                    { name: 'Core Committee Members', members: [ { name: 'Manojkumar S', role: 'General Secretary' }, { name: 'Chandramouli D', role: 'Treasurer - I' }, { name: 'Austin Allan A', role: 'Treasurer - II' }, { name: 'Aravinda Krishnan', role: 'Treasurer - III' }, { name: 'Kaustubh Pavagada', role: 'Event Co-ordinator - I' }, { name: 'Swetha M', role: 'Event Co-ordinator - II' }, { name: 'Tejas', role: 'Event Co-ordinator - III' }, { name: 'Bandreddy Pavan Sai', role: 'Event Co-ordinator - IV' } ] },
+                ];
+                
+                document.addEventListener("DOMContentLoaded", () => {
+                    const container = document.querySelector(".space-y-6");
+                    teams.forEach(team => {
+                        const teamCard = document.createElement("div");
+                        teamCard.className = "bg-gray-800 p-4 rounded-lg shadow-md";
+                        teamCard.innerHTML = `<h2 class='text-xl font-semibold tech-font'>${team.name}</h2>`;
+                        
+                        team.members.forEach(member => {
+                            const memberDiv = document.createElement("div");
+                            memberDiv.className = "ml-4 text-gray-400";
+                            memberDiv.innerHTML = `<p><strong>${member.name}</strong> - ${member.role}</p>`;
+                            teamCard.appendChild(memberDiv);
+                        });
+                        
+                        container.appendChild(teamCard);
+                    });
+                });
+            </script>
         </div>
-
-        <!-- Club Heads Section -->
-        <div class="max-w-7xl mx-auto px-4 space-y-6">
-            <div class="flex items-center space-x-3 justify-center">
-                <div class="p-2 bg-blue-500 rounded-full">
-                    ⭐ <!-- Star Icon Placeholder -->
-                </div>
-                <h2 class="text-3xl font-bold text-center">Club Heads</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Club Heads Members -->
-                <div class="bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?fit=crop&w=300&h=300" 
-                         alt="Rahul Sharma" 
-                         class="w-full h-48 object-cover">
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-semibold mb-2">Rahul Sharma</h3>
-                        <p class="text-blue-400 font-medium mb-2">Technical Club Head</p>
-                        <p class="text-gray-400 text-sm">Computer Science</p>
-                    </div>
-                </div>
-                <div class="bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?fit=crop&w=300&h=300" 
-                         alt="Priya Patel" 
-                         class="w-full h-48 object-cover">
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-semibold mb-2">Priya Patel</h3>
-                        <p class="text-blue-400 font-medium mb-2">Cultural Club Head</p>
-                        <p class="text-gray-400 text-sm">Electronics</p>
-                    </div>
-                </div>
-                <div class="bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?fit=crop&w=300&h=300" 
-                         alt="Arun Kumar" 
-                         class="w-full h-48 object-cover">
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-semibold mb-2">Arun Kumar</h3>
-                        <p class="text-blue-400 font-medium mb-2">Design Club Head</p>
-                        <p class="text-gray-400 text-sm">Mechanical</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Subheads Section -->
-        <div class="max-w-7xl mx-auto px-4 space-y-6">
-            <div class="flex items-center space-x-3 justify-center">
-                <div class="p-2 bg-blue-500 rounded-full">
-                    👤 <!-- User Icon Placeholder -->
-                </div>
-                <h2 class="text-3xl font-bold text-center">Club Subheads</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Club Subheads Members -->
-                <div class="bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=300&h=300" 
-                         alt="Sneha Reddy" 
-                         class="w-full h-48 object-cover">
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-semibold mb-2">Sneha Reddy</h3>
-                        <p class="text-blue-400 font-medium mb-2">Technical Subhead</p>
-                        <p class="text-gray-400 text-sm">Computer Science</p>
-                    </div>
-                </div>
-                <div class="bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?fit=crop&w=300&h=300" 
-                         alt="Vikram Singh" 
-                         class="w-full h-48 object-cover">
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-semibold mb-2">Vikram Singh</h3>
-                        <p class="text-blue-400 font-medium mb-2">Cultural Subhead</p>
-                        <p class="text-gray-400 text-sm">Electronics</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 </body>
 </html>
